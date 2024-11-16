@@ -1,0 +1,19 @@
+rooms:
+  cozy_room:
+    description: "This is a cozy room."
+    exits:
+      south: dark_cave
+      north: bright_cave
+      east: calm_beach
+  dark_cave:
+    description: "This is a dark cave."
+    exits:
+      north: cozy_room
+  bright_cave:
+    description: "This is a bright cave lit by sconces."
+    exits:
+      south: cozy_room
+  calm_beach:
+    description: "This is a calm beach with white sand."
+    exits:
+      west: cozy_room
