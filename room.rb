@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'yaml'
 
+# Represents a room in the game, with various attributes and exits.
 class Room
   attr_accessor :short_description, :exits
 
@@ -22,15 +25,12 @@ def load_rooms(file_path)
 
   # create rooms without exits
   data['rooms'].each do |id, info|
-    rooms[id] = Room.new(info['short_description'], info['long_description'])
-  end
-
-  # link exits
-  data['rooms'].each do |id, info|
-    room = rooms[id]
+    room = Room.new(info['short_description'], info['long_description'])
     info['exits'].each do |direction, neighbor_id|
       room.exits[direction.to_sym] = rooms[neighbor_id]
     end
+    rooms[id] = room
   end
+
   rooms
 end
