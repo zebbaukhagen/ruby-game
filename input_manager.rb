@@ -1,20 +1,24 @@
+# frozen_string_literal: true
+
+# Handles input from the player and delegates to appropriate classes.
 class InputManager
+  GLOBAL_COMMANDS = {
+    'q' => :quit,
+    'quit' => :quit,
+    'north' => :move,
+    'south' => :move,
+    'east' => :move,
+    'west' => :move,
+    'look' => :look
+  }.freeze
 
   def initialize(player, game_state)
     @player = player
     @game_state = game_state
-    @global_commands = {
-      "q"     => :quit,
-      "quit"  => :quit,
-      "north" => :move,
-      "south" => :move,
-      "east"  => :move,
-      "west"  => :move,
-      "look"  => :look
-    }
+    @global_commands = GLOBAL_COMMANDS
   end
 
-  def get_input
+  def input
     gets.chomp.downcase
   end
 
@@ -27,8 +31,7 @@ class InputManager
     when :look
       @player.view_current_room(true)
     else
-      puts "No such command known."
+      puts 'No such command known.'
     end
   end
-
 end

@@ -1,5 +1,6 @@
 rooms:
   cozy_room:
+    name: "Cozy Room"
     short_description: "This is a cozy room."
     long_description: "This is a cozy room with a fireplace and a table."
     exits:
@@ -7,16 +8,19 @@ rooms:
       north: bright_cave
       east: calm_beach
   dark_cave:
+    name: "Dark Cave"
     short_description: "This is a dark cave."
     long_description: "This is a dark cave with a torch and a small pool."
     exits:
       north: cozy_room
   bright_cave:
+    name: "Bright Cave"
     short_description: "This is a bright cave lit by sconces."
     long_description: "This is a bright cave lit by sconces. There are many interesting rocks here."
     exits:
       south: cozy_room
   calm_beach:
+    name: "Calm Beach"
     short_description: "This is a calm beach with white sand."
     long_description: "This is a calm beach with white sand. The waves lap lazily upon the shore, leaving bubbles in their wake."
     exits:

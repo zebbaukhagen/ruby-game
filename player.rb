@@ -4,6 +4,10 @@
 class Player
   attr_accessor :current_room
 
+  def initialize(starting_room)
+    @current_room = starting_room
+  end
+
   def view_current_room(long_look)
     current_room.view_room(long_look)
   end
