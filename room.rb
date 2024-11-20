@@ -19,12 +19,23 @@ class Room
     items_names << room_inv.map(&:short_description)
     description = long_look ? @long_description : @short_description
     puts Rainbow(description).whitesmoke
-    puts "These items sit nearby: #{items_names.join(', ')}"
+    puts "These items sit nearby: #{items_names.join(', ')}" unless @room_inv.empty?
     puts "This room has the following exits: #{@exits.keys.join(', ')}"
   end
 
   def add_item(item)
     @room_inv << item
+  end
+
+  def return_item!(item_name)
+    item = @room_inv.find { |element| element.short_name == item_name }
+    return unless item
+
+    @room_inv.delete(item)
+  end
+
+  def find_item_by_name(item_name)
+    @room_inv.find { |item| item.short_name == item_name }
   end
 end
 

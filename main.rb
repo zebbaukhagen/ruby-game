@@ -8,11 +8,14 @@ require_relative 'item'
 require_relative 'input_manager'
 require_relative 'custom_backtrace'
 
-cup = Item.new('cup', 'a plain brown cup', 'A plain brown cup, made of clay sits here silently.')
+cup = Item.new('cup', 'a plain brown cup', 'A plain brown cup made of clay.')
+plate = Item.new('plate', 'a flat round ceramic plate', 'A plain round ceramic plate with no lip.')
 
-starting_room = 'dark_cave'
+starting_room = 'cozy_room'
 rooms = load_rooms('rooms.yml')
+
 rooms[starting_room].add_item(cup)
+rooms[starting_room].add_item(plate)
 
 game_state = {
   quitting: false
