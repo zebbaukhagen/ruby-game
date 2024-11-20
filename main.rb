@@ -6,27 +6,24 @@ require_relative 'room'
 require_relative 'player'
 require_relative 'item'
 require_relative 'input_manager'
+require_relative 'item_manager'
 require_relative 'custom_backtrace'
-
-cup = Item.new('cup', 'a plain brown cup', 'A plain brown cup made of clay.')
-plate = Item.new('plate', 'a flat round ceramic plate', 'A plain round ceramic plate with no lip.')
-
-starting_room = 'cozy_room'
-rooms = load_rooms('rooms.yml')
-
-rooms[starting_room].add_item(cup)
-rooms[starting_room].add_item(plate)
 
 game_state = {
   quitting: false
 }
 
+starting_room = 'cozy_room'
+rooms = load_rooms('rooms.yml')
+
 PROMPT = Rainbow('Player > ').midnightblue
 
 player = Player.new(rooms[starting_room])
 input_manager = InputManager.new(player, game_state)
+# item_manager = ItemManager.new(rooms)
+# item_manager.spawn_items
 
-# system('clear')
+system('clear')
 player.view_current_room(false)
 
 # main game loop

@@ -54,6 +54,8 @@ class InputManager
   def process_look(args)
     if args.empty?
       @player.view_current_room(true)
+    elsif args.size == 1
+      puts 'What are you trying to look at?'
     elsif args[0] == 'at'
       item_name = args[1..].join(' ')
       @player.inspect_item(item_name)

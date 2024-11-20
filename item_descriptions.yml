@@ -1,0 +1,46 @@
+items:
+  cup:
+    short_description: "a plain brown cup"
+    long_description: "A plain brown cup made of clay."
+  plate:
+    short_description: "a flat round ceramic plate"
+    long_description: "A plain round ceramic plate with no lip."
+  spoon:
+    short_description: "a shiny silver spoon"
+    long_description: "A small spoon made of tarnished silver, with an intricate floral pattern on the handle."
+  key:
+    short_description: "a rusty old key"
+    long_description: "An old iron key, rusted from years of neglect. It looks like it might open something important."
+  lantern:
+    short_description: "a dimly lit lantern"
+    long_description: "A brass lantern with a glass case. The flame inside flickers weakly, casting eerie shadows."
+  book:
+    short_description: "a dusty leather-bound book"
+    long_description: "A thick book with a cracked leather cover. The pages are yellowed and filled with handwritten notes."
+  dagger:
+    short_description: "a short steel dagger"
+    long_description: "A well-balanced steel dagger with a leather-wrapped hilt. The blade is sharp and slightly curved."
+  rope:
+    short_description: "a coiled length of rope"
+    long_description: "A sturdy hemp rope, coiled neatly. It's about 20 feet long and smells faintly of saltwater."
+  apple:
+    short_description: "a bright red apple"
+    long_description: "A perfectly ripe apple with a glossy red skin. It looks fresh and juicy."
+  coin:
+    short_description: "a small golden coin"
+    long_description: "A coin made of pure gold. It has an unfamiliar crest on one side and the profile of a king on the other."
+  mirror:
+    short_description: "a small handheld mirror"
+    long_description: "A polished bronze mirror with an ornate handle shaped like a vine. Its surface reflects faintly distorted images."
+  glove:
+    short_description: "a single leather glove"
+    long_description: "A right-hand glove made of soft, supple leather. The fingers are stained from heavy use."
+  bottle:
+    short_description: "a green glass bottle"
+    long_description: "A thick glass bottle with a cork stopper. It sloshes lightly, suggesting it contains a liquid."
+  hat":
+    short_description: "a wide-brimmed straw hat"
+    long_description: "A sunhat made of tightly woven straw. Its brim is frayed, but it provides good shade."
+  feather:
+    short_description: "a large white feather"
+    long_description: "A long feather, pure white and unblemished. It feels soft but sturdy, as if it once belonged to a magnificent bird."
