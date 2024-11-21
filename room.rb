@@ -15,12 +15,16 @@ class Room
   end
 
   def view_room(long_look)
-    items_names = []
-    items_names << room_inv.map(&:short_description)
+    item_names = items_in_room
     description = long_look ? @long_description : @short_description
+    puts Rainbow(@name).thistle
     puts Rainbow(description).whitesmoke
-    puts "These items sit nearby: #{items_names.join(', ')}" unless @room_inv.empty?
+    puts "These items sit nearby: #{item_names.join(', ')}" unless @room_inv.empty?
     puts "This room has the following exits: #{@exits.keys.join(', ')}"
+  end
+
+  def items_in_room
+    room_inv.map(&:short_description)
   end
 
   def add_item(item)

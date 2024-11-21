@@ -13,17 +13,16 @@ game_state = {
   quitting: false
 }
 
-starting_room = 'cozy_room'
+starting_room = '00001'
 rooms = load_rooms('rooms.yml')
 
 PROMPT = Rainbow('Player > ').midnightblue
 
 player = Player.new(rooms[starting_room])
 input_manager = InputManager.new(player, game_state)
-# item_manager = ItemManager.new(rooms)
-# item_manager.spawn_items
+ItemManager.new(rooms)
 
-system('clear')
+# system('clear')
 player.view_current_room(false)
 
 # main game loop

@@ -38,7 +38,7 @@ items:
   bottle:
     short_description: "a green glass bottle"
     long_description: "A thick glass bottle with a cork stopper. It sloshes lightly, suggesting it contains a liquid."
-  hat":
+  hat:
     short_description: "a wide-brimmed straw hat"
     long_description: "A sunhat made of tightly woven straw. Its brim is frayed, but it provides good shade."
   feather:

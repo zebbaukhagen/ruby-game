@@ -1,27 +1,36 @@
 rooms:
-  cozy_room:
-    name: "Cozy Room"
-    short_description: "This is a cozy room."
-    long_description: "This is a cozy room with a fireplace and a table."
+  "00000":
+    name: "Template"
+    short_description: "Template"
+    long_description: "Template"
     exits:
-      south: dark_cave
-      north: bright_cave
-      east: calm_beach
-  dark_cave:
-    name: "Dark Cave"
-    short_description: "This is a dark cave."
-    long_description: "This is a dark cave with a torch and a small pool."
+      north: "00000"
+      south: "00000"
+      east: "00000"
+      west: "00000"
+  "00001":
+    name: "Dark Cell"
+    short_description: "A dark prison cell."
+    long_description: "This is a dark uncomfortable cell. Some hay is strewn about on the floor. Iron bars divide the room in two. Just outside of the cell is a plain wooden bench. The wind can be faintly heard outside and the entire room sways slightly."
     exits:
-      north: cozy_room
-  bright_cave:
-    name: "Bright Cave"
-    short_description: "This is a bright cave lit by sconces."
-    long_description: "This is a bright cave lit by sconces. There are many interesting rocks here."
+      north: "00002"
+  "00002":
+    name: "Dingey Galley"
+    short_description: "A dingey galley."
+    long_description: "A much larger room entirely made out of wood. The floor is dirty and an unpleasant stench permeates the air. A staircase leads up to a hatch, and three doorways lead to other rooms."
     exits:
-      south: cozy_room
-  calm_beach:
-    name: "Calm Beach"
-    short_description: "This is a calm beach with white sand."
-    long_description: "This is a calm beach with white sand. The waves lap lazily upon the shore, leaving bubbles in their wake."
+      south: "00001"
+      east: "00003"
+      west: "00004"
+  "00003":
+    name: "Dirty Kitchen"
+    short_description: "A dirty kitchen."
+    long_description: "Several disgusting wooden tables line the walls of this unwashed room. A cast iron stove proudly dominates the scene with a vent jutting up and straight out of a wall. The floor is stained a deep reddish brown and is sticky in places."
     exits:
-      west: cozy_room
+      west: "00002"
+  "00004":
+    name: "Crew Quarters"
+    short_description: "Crew Quarters"
+    long_description: "Two rows of three bunk beds congest the limited space. Some filtered light illuminates dust motes as it streams from between crackes in the ceiling boards."
+    exits:
+      east: "00002"
