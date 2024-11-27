@@ -14,6 +14,9 @@ class ItemManager
   def spawn_items
     cup = spawn(:cup)
     @rooms['00001'].add_item(cup) if cup
+
+    feather = spawn(:feather)
+    @rooms['00002'].add_item(feather) if feather
   end
 
   def spawn(type)
@@ -22,7 +25,7 @@ class ItemManager
 
   def load_items(file_path)
     data = YAML.safe_load(File.read(file_path), symbolize_names: true)
-    puts 'Item data loaded' if data && data[:items]
+    # puts 'Item data loaded' if data && data[:items]
     return unless data && data[:items] # Safeguard against malformed YAML
 
     data[:items].each do |id, info|

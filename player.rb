@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'enhanced_output'
+
 # Represents the player in the game, with access to the current room.
 class Player
   attr_accessor :current_room, :inventory

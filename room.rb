@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'enhanced_output'
+
 require 'yaml'
 
 # Represents a room in the game, with various attributes and exits.

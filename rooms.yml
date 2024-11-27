@@ -17,11 +17,12 @@ rooms:
   "00002":
     name: "Dingey Galley"
     short_description: "A dingey galley."
-    long_description: "A much larger room entirely made out of wood. The floor is dirty and an unpleasant stench permeates the air. A staircase leads up to a hatch, and three doorways lead to other rooms."
+    long_description: "A large room entirely made out of wood. The floor is dirty and an unpleasant stench permeates the air. A staircase leads up to a hatch, and three doorways lead to other rooms."
     exits:
       south: "00001"
       east: "00003"
       west: "00004"
+      up: "00005"
   "00003":
     name: "Dirty Kitchen"
     short_description: "A dirty kitchen."
@@ -30,7 +31,13 @@ rooms:
       west: "00002"
   "00004":
     name: "Crew Quarters"
-    short_description: "Crew Quarters"
+    short_description: "Cramped crew quarters."
     long_description: "Two rows of three bunk beds congest the limited space. Some filtered light illuminates dust motes as it streams from between crackes in the ceiling boards."
     exits:
       east: "00002"
+  "00005":
+    name: "Ship Deck"
+    short_description: "A ship deck."
+    long_description: "A thick mast stands proudly at the center of wooden deck. At its top, the salty wind catches two large white sails. Along the edges of the deck are waist height wooden railing, broken only by an anchor hoist."
+    exits:
+      down: "00002"

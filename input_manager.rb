@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
+require_relative 'enhanced_output'
+
 # Handles input from the player and delegates to appropriate classes.
 class InputManager
   GLOBAL_COMMANDS = {
     'q' => :quit,
     'quit' => :quit,
-    'north' => :move,
-    'south' => :move,
-    'east' => :move,
-    'west' => :move,
     'look' => :look,
     'inventory' => :inventory,
     'inv' => :inventory,
@@ -17,10 +15,22 @@ class InputManager
     'drop' => :drop
   }.freeze
 
+  MOVEMENT_COMMANDS = {
+    'north' => :move,
+    'northwest' => :move,
+    'northeast' => :move,
+    'south' => :move,
+    'southwest' => :move,
+    'southeast' => :move,
+    'east' => :move,
+    'west' => :move,
+    'down' => :move,
+    'up' => :move
+  }.freeze
+
   def initialize(player, game_state)
     @player = player
     @game_state = game_state
-    @global_commands = GLOBAL_COMMANDS
   end
 
   def input
@@ -32,11 +42,15 @@ class InputManager
     # Destructure the command
     command, *args = input.split
 
-    case @global_commands[command]
-    when :quit
-      @game_state[:quitting] = true
+    case MOVEMENT_COMMANDS[command]
     when :move
       @player.attempt_move(input)
+      return
+    end
+
+    case GLOBAL_COMMANDS[command]
+    when :quit
+      @game_state[:quitting] = true
     when :look
       process_look(args)
     when :inventory
