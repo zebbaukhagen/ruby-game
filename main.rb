@@ -7,6 +7,7 @@ require_relative 'item'
 require_relative 'input_manager'
 require_relative 'item_manager'
 require_relative 'custom_backtrace'
+require_relative 'enhanced_output'
 
 game_state = {
   quitting: false
