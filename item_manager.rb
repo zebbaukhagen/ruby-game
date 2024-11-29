@@ -20,7 +20,8 @@ class ItemManager
   end
 
   def spawn(type)
-    Item.new(type.to_s, @item_defs[type][:short_description], @item_defs[type][:long_description])
+    Item.new(type.to_s, @item_defs[type][:short_description], @item_defs[type][:long_description],
+             @item_defs[type][:weight])
   end
 
   def load_items(file_path)

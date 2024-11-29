@@ -48,7 +48,7 @@ class Player
   def inspect_item(item_name)
     item = @current_room.find_item_by_name(item_name) || find_item_by_name(item_name)
     if item
-      puts item.long_description
+      puts "#{item.long_description} It weighs approximately #{item.weight} kgs."
     else
       puts 'What are you trying to look at?'
     end
